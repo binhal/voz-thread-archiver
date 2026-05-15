@@ -1,0 +1,18 @@
+{
+  "total_pages": 1,
+  "successful_pages": 1,
+  "failed_pages": 0,
+  "total_posts": 20,
+  "pages": [
+    {
+      "page": 1,
+      "url": "https://voz.vn/t/ban-luan-ve-cac-truyen-tien-hiep-kiem-hiep-ky-ao-ver-nextvoz.1421/page-1",
+      "status": 200,
+      "title": "thảo luận - Bàn Luận Về Các Truyện Tiên Hiệp/Kiếm Hiệp/Kỳ Ảo (Ver NextVoz) | VOZ",
+      "post_count": 20,
+      "markdown_path": "page-0001.md",
+      "raw_path": "raw/page-0001.html",
+      "error": null
+    }
+  ]
+}
