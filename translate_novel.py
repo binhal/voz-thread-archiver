@@ -7,7 +7,7 @@ import urllib.parse
 from txt_to_epub import build_epub
 
 # Cấu hình mặc định
-INPUT_TXT = "太平令.txt"
+INPUT_TXT = os.path.join("books", "太平令.txt")
 
 # Chỉ số chương bắt đầu dịch (Mặc định là 0 để dịch từ đầu truyện. Đặt là 240 để dịch từ chương "Giang hồ của Lý Quan Nhất và Dao Quang")
 START_CHAPTER_IDX = 240
@@ -17,17 +17,17 @@ START_CHAPTER_IDX = 240
 # Cấu hình Model Gemini sử dụng (vui lòng sử dụng "gemini-2.5-flash" hoặc "gemini-3-flash-preview" thay vì gemini-1.5-flash đã bị khai tử)
 GEMINI_MODEL = "gemini-2.5-flash"
 
-GEMINI_PROGRESS_DIR = "translation_progress_gemini"
-GEMINI_OUTPUT_TXT = "太平令_Vietnamese_gemini.txt"
-GEMINI_OUTPUT_EPUB = "太平令_Vietnamese_gemini.epub"
+GEMINI_PROGRESS_DIR = os.path.join("progress", "gemini")
+GEMINI_OUTPUT_TXT = os.path.join("books", "太平令_Vietnamese_gemini.txt")
+GEMINI_OUTPUT_EPUB = os.path.join("books", "太平令_Vietnamese_gemini.epub")
 
-MINIMAX_PROGRESS_DIR = "translation_progress_minimax"
-MINIMAX_OUTPUT_TXT = "太平令_Vietnamese_minimax.txt"
-MINIMAX_OUTPUT_EPUB = "太平令_Vietnamese_minimax.epub"
+MINIMAX_PROGRESS_DIR = os.path.join("progress", "minimax")
+MINIMAX_OUTPUT_TXT = os.path.join("books", "太平令_Vietnamese_minimax.txt")
+MINIMAX_OUTPUT_EPUB = os.path.join("books", "太平令_Vietnamese_minimax.epub")
 
-GOOGLE_PROGRESS_DIR = "translation_progress_google"
-GOOGLE_OUTPUT_TXT = "太平令_Vietnamese_google.txt"
-GOOGLE_OUTPUT_EPUB = "太平令_Vietnamese_google.epub"
+GOOGLE_PROGRESS_DIR = os.path.join("progress", "google")
+GOOGLE_OUTPUT_TXT = os.path.join("books", "太平令_Vietnamese_google.txt")
+GOOGLE_OUTPUT_EPUB = os.path.join("books", "太平令_Vietnamese_google.epub")
 
 # System Prompt tối ưu hóa cho dịch thuật truyện kiếm hiệp/dã sử của chúng ta
 SYSTEM_PROMPT = """You are a master literary translator specializing in translating Chinese web novels (wuxia/historical fantasy) into polished, natural, and elegant Vietnamese.

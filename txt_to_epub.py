@@ -35,9 +35,9 @@ def build_epub(txt_path, epub_path, title="Thái Bình Lệnh", author="Diêm ZK
     current_chapter_title = "Giới thiệu & Tóm tắt"
     current_chapter_content = []
 
-    # Regex nhận diện tiêu đề chương thông minh (hỗ trợ cả chữ số Ả Rập và chữ số Trung Quốc)
-    # Ví dụ: "第1章", "第一章", "第 123 章", "第100章...", v.v.
-    chapter_pattern = re.compile(r'^\s*(第\s*[0-9一二三四五六七八九十百千万\s]+\s*[章节集]).*')
+    # Regex nhận diện tiêu đề chương thông minh (hỗ trợ cả tiếng Trung và tiếng Việt)
+    # Ví dụ: "第1章", "第一章", "Chương 82", v.v.
+    chapter_pattern = re.compile(r'^\s*(?:第\s*[0-9一二三四五六七八九十百千万\s]+\s*[章节集]|Chương\s*[0-9\s]+).*', re.IGNORECASE)
 
     print("[*] Đang phân tích cấu trúc chương...")
     for idx, line in enumerate(lines):
@@ -210,11 +210,16 @@ p {
     return True
 
 if __name__ == "__main__":
-    txt_file = "太平令.txt"
-    epub_file = "太平令.epub"
+    txt_file = os.path.join("books", "太平令.txt")
+    epub_file = os.path.join("books", "太平令.epub")
     
     if not os.path.exists(txt_file):
-        print(f"[-] Không tìm thấy file nguồn '{txt_file}' ở thư mục hiện tại.")
+        # Fallback to root directory if books folder is not used
+        txt_file = "太平令.txt"
+        epub_file = "太平令.epub"
+        
+    if not os.path.exists(txt_file):
+        print(f"[-] Không tìm thấy file nguồn '{txt_file}' ở thư mục 'books/' hoặc thư mục hiện tại.")
         sys.exit(1)
         
     build_epub(txt_file, epub_file)
