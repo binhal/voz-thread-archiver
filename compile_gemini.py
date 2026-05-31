@@ -1,6 +1,8 @@
 import os
 import json
 import sys
+import glob
+import re
 from txt_to_epub import build_epub
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -9,8 +11,20 @@ progress_dir = os.path.join("progress", "gemini")
 output_txt = os.path.join("books", "太平令_Vietnamese_gemini.txt")
 output_epub = os.path.join("books", "太平令_Vietnamese_gemini.epub")
 
+# Find the maximum chapter number in progress_dir
+files = glob.glob(os.path.join(progress_dir, "chapter_*.json"))
+max_chapter = 301 # default fallback
+if files:
+    numbers = []
+    for f in files:
+        match = re.search(r'chapter_(\d+)\.json', os.path.basename(f))
+        if match:
+            numbers.append(int(match.group(1)))
+    if numbers:
+        max_chapter = max(numbers)
+
 all_translated_lines = []
-total_chapters = 300
+total_chapters = max_chapter + 1
 START_CHAPTER_IDX = 240
 
 chapters_merged = 0
