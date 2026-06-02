@@ -81,7 +81,18 @@ This automatically merges the chapters starting from index 240, writes [太平�
 > [!WARNING]
 > **Pre-Compilation Check:** Before compiling the ebook, verify that the corresponding `.json` files in `progress/gemini/` for all active chapters are fully up to date and in sync with the files in `chapters/vi/`.
 
-### Step 6: Troubleshooting & Unifying Chapter Numbers
+### Step 6: Commit and Push Changes to Git
+Once the EPUB and text files are compiled successfully, stage all changes, commit them with a descriptive message, and push to origin:
+```bash
+git add .
+git commit -m "Translate chapters XXX-YYY and compile EPUB"
+git push origin main
+```
+
+> [!IMPORTANT]
+> **Git Sync Rule:** Always commit and push your changes to the remote Git repository at the end of each batch of translations to keep the repository updated.
+
+### Step 7: Troubleshooting & Unifying Chapter Numbers
 If any chapter numbering inconsistencies ever occur (e.g., a chapter is accidentally numbered using a volume-specific chapter reset from the raw text instead of the continuous global index), you can automatically fix and unify all chapter titles in both `.txt` and `.json` files by running:
 ```bash
 python unify_chapters.py
