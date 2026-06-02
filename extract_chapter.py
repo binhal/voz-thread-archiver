@@ -1,9 +1,10 @@
 import sys
 import re
+import os
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-txt_path = r"D:\01 Personal\Projects\voz-thread-archiver\books\太平令.txt"
+txt_path = os.path.join("books", "太平令.txt")
 
 content = ""
 for encoding in ['gb18030', 'utf-8-sig', 'utf-8', 'gbk', 'cp936']:
@@ -60,9 +61,8 @@ if len(chapters) > target_idx:
     title, lines = chapters[target_idx]
     print(f"[+] Chapter {target_idx} Title: {title}")
     print(f"[+] Content line count: {len(lines)}")
-    import os
-    os.makedirs(r"D:\01 Personal\Projects\voz-thread-archiver\chapters\cn", exist_ok=True)
-    cn_file = fr"D:\01 Personal\Projects\voz-thread-archiver\chapters\cn\chapter_{target_idx:04d}_cn.txt"
+    os.makedirs(os.path.join("chapters", "cn"), exist_ok=True)
+    cn_file = os.path.join("chapters", "cn", f"chapter_{target_idx:04d}_cn.txt")
     with open(cn_file, "w", encoding="utf-8") as f:
         f.write(title + "\n\n" + "\n".join(lines))
     print(f"[+] Successfully wrote {cn_file}")
