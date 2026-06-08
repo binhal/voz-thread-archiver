@@ -11,6 +11,7 @@ from novel_tools.config import ConfigError, load_book_config
 from novel_tools.paths import BookPaths, book_dir_for_id, find_repo_root, list_book_ids
 from novel_tools.progress import find_indices, latest_index, missing_indices, register_chapter
 from novel_tools.compiler import compile_book
+from novel_tools.context import build_context
 
 
 CN_CHAPTER_PATTERN = re.compile(r"^chapter_\d{4,}_cn\.txt$")
@@ -35,6 +36,8 @@ def main(argv: list[str] | None = None, stdout: TextIO | None = None) -> int:
             return _register(root, args.book, args.chapter, output)
         if args.command == "compile":
             return _compile(root, args.book, output)
+        if args.command == "context":
+            return _context(root, args.book, args.chapter, output)
     except ConfigError as exc:
         parser.exit(1, f"error: {exc}\n")
 
@@ -61,6 +64,10 @@ def _build_parser() -> argparse.ArgumentParser:
 
     compile_parser = subparsers.add_parser("compile", help="Compile translated book to txt and epub")
     compile_parser.add_argument("--book", required=True, help="Book id to compile")
+
+    context_parser = subparsers.add_parser("context", help="Get translation context for a chapter")
+    context_parser.add_argument("--book", required=True, help="Book id")
+    context_parser.add_argument("--chapter", required=True, type=int, help="Chapter index")
 
     return parser
 
@@ -120,6 +127,12 @@ def _compile(root: Path, book_id: str, stdout: TextIO) -> int:
     print(f"Merged {result.chapters_merged} chapters", file=stdout)
     print(f"Wrote {_display_path(result.output_txt, root)}", file=stdout)
     print(f"Wrote {_display_path(result.output_epub, root)}", file=stdout)
+    return 0
+
+
+def _context(root: Path, book_id: str, chapter_index: int, stdout: TextIO) -> int:
+    book_dir = book_dir_for_id(book_id, root)
+    print(build_context(book_dir, chapter_index), end="", file=stdout)
     return 0
 
 
