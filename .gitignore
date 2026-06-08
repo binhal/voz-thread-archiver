@@ -152,6 +152,7 @@ cython_debug/
 backup/
 backup-smoke/
 .test-output/
+.worktrees/
 
 # IDEs
 .vscode/
