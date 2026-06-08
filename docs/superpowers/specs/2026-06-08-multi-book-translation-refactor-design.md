@@ -4,7 +4,7 @@
 
 Refactor the repository from a single-title translation workspace into a multi-book translation toolchain. Each book should be self-contained, with its own source text, extracted chapters, translated chapters, progress JSON, compiled outputs, and translation harness. Shared mechanics should live in one reusable Python package and one generic agent skill.
 
-The first migration target is the existing `thai-binh-lenh` work. The second title, `luan-hoi-lac-vien`, should be added as a new book workspace using the existing raw source file.
+The first migration target is the existing `thai-binh-lenh` work. The second title, `luan-hoi-nhac-vien`, should be added as a new book workspace using the existing raw source file.
 
 ## Decisions
 
@@ -40,7 +40,7 @@ library/
       thai-binh-lenh.vi.txt
       thai-binh-lenh.vi.epub
 
-  luan-hoi-lac-vien/
+  luan-hoi-nhac-vien/
     book.yaml
     harness.md
     glossary.tsv
@@ -190,9 +190,9 @@ unify_chapters.py
    - keep `skills/novel-translator/SKILL.md` as the generic multi-book workflow;
    - move only `thai-binh-lenh`-specific style rules into `library/thai-binh-lenh/harness.md`;
    - keep reusable process rules in the skill.
-5. Create `library/luan-hoi-lac-vien/`.
-6. Move `books/轮回乐园.txt` to `library/luan-hoi-lac-vien/source/轮回乐园.txt`.
-7. Create starter `book.yaml` and `harness.md` for `luan-hoi-lac-vien`.
+5. Create `library/luan-hoi-nhac-vien/`.
+6. Move `books/轮回乐园.txt` to `library/luan-hoi-nhac-vien/source/轮回乐园.txt`.
+7. Create starter `book.yaml` and `harness.md` for `luan-hoi-nhac-vien`.
 8. Remove old top-level `books/`, `chapters/`, and `progress/` after the new CLI passes verification.
 
 Migration must not modify translated chapter content. Move files and update paths only.
@@ -217,7 +217,7 @@ python -m unittest
 python -m novel_tools list-books
 python -m novel_tools inspect --book thai-binh-lenh
 python -m novel_tools compile --book thai-binh-lenh
-python -m novel_tools inspect --book luan-hoi-lac-vien
+python -m novel_tools inspect --book luan-hoi-nhac-vien
 python -m novel_tools context --book thai-binh-lenh --chapter 563
 ```
 

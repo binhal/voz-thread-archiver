@@ -1,5 +1,5 @@
-id: luan-hoi-lac-vien
-title: "Luân Hồi Lạc Viên"
+id: luan-hoi-nhac-vien
+title: "Luân Hồi Nhạc Viên"
 source_title: "轮回乐园"
 author: "Unknown"
 language:
@@ -11,11 +11,11 @@ chapter:
 source:
   file: "source/轮回乐园.txt"
 outputs:
-  txt: "output/luan-hoi-lac-vien.vi.txt"
-  epub: "output/luan-hoi-lac-vien.vi.epub"
+  txt: "output/luan-hoi-nhac-vien.vi.txt"
+  epub: "output/luan-hoi-nhac-vien.vi.epub"
 providers:
   default: gemini
   progress_dir: "progress/gemini"
 epub:
-  title: "Luân Hồi Lạc Viên (Bản dịch Việt)"
+  title: "Luân Hồi Nhạc Viên (Bản dịch Việt)"
   author: "Unknown"
