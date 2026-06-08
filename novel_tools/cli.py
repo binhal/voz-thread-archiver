@@ -21,6 +21,11 @@ PROGRESS_ENTRY_PATTERN = re.compile(r"^chapter_\d{4,}\.json$")
 
 def main(argv: list[str] | None = None, stdout: TextIO | None = None) -> int:
     output = sys.stdout if stdout is None else stdout
+    if hasattr(output, "reconfigure"):
+        try:
+            output.reconfigure(encoding="utf-8")
+        except Exception:
+            pass
     parser = _build_parser()
     args = parser.parse_args(argv)
 

@@ -1,0 +1,21 @@
+id: luan-hoi-lac-vien
+title: "Luân Hồi Lạc Viên"
+source_title: "轮回乐园"
+author: "Unknown"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 0
+  title_format: "Chương {index}: {title}"
+source:
+  file: "source/轮回乐园.txt"
+outputs:
+  txt: "output/luan-hoi-lac-vien.vi.txt"
+  epub: "output/luan-hoi-lac-vien.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Luân Hồi Lạc Viên (Bản dịch Việt)"
+  author: "Unknown"
