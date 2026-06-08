@@ -1,7 +1,10 @@
 import tempfile
 import unittest
+from io import StringIO
 from pathlib import Path
+from unittest.mock import patch
 
+from novel_tools.cli import main
 from novel_tools.config import BookConfig, ConfigError, load_book_config, parse_limited_yaml
 from novel_tools.paths import BookPaths, book_dir_for_id, find_library_dir, list_book_ids
 
@@ -81,6 +84,39 @@ class ConfigTests(unittest.TestCase):
 
             self.assertEqual(find_library_dir(root), library)
             self.assertEqual(list_book_ids(root), ["a", "b"])
+
+    def test_cli_list_books_prints_book_ids(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            book_dir = root / "library" / "sample-book"
+            book_dir.mkdir(parents=True)
+            (book_dir / "book.yaml").write_text(BOOK_YAML, encoding="utf-8")
+            with patch("novel_tools.cli.find_repo_root", return_value=root):
+                out = StringIO()
+                code = main(["list-books"], stdout=out)
+            self.assertEqual(code, 0)
+            self.assertIn("sample-book", out.getvalue())
+            self.assertIn("Sample Book", out.getvalue())
+
+    def test_cli_inspect_prints_counts_and_outputs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            book_dir = root / "library" / "sample-book"
+            (book_dir / "chapters" / "cn").mkdir(parents=True)
+            (book_dir / "chapters" / "vi").mkdir(parents=True)
+            (book_dir / "progress" / "gemini").mkdir(parents=True)
+            (book_dir / "book.yaml").write_text(BOOK_YAML, encoding="utf-8")
+            (book_dir / "chapters" / "vi" / "chapter_0010.txt").write_text("Chương 10: A\n\nBody", encoding="utf-8")
+            (book_dir / "progress" / "gemini" / "chapter_0010.json").write_text("{}", encoding="utf-8")
+            with patch("novel_tools.cli.find_repo_root", return_value=root):
+                out = StringIO()
+                code = main(["inspect", "--book", "sample-book"], stdout=out)
+            self.assertEqual(code, 0)
+            text = out.getvalue()
+            self.assertIn("Book: sample-book", text)
+            self.assertIn("Vietnamese chapters: 1", text)
+            self.assertIn("Progress entries: 1", text)
+            self.assertIn("output/sample.vi.txt", text)
 
     def test_book_dir_for_id_rejects_path_traversal(self):
         with tempfile.TemporaryDirectory() as tmp:
