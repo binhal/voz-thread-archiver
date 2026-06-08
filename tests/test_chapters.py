@@ -46,6 +46,24 @@ class ChapterTests(unittest.TestCase):
         self.assertEqual(chapters[2].title, "第2章第二章标题")
         self.assertEqual(chapters[2].lines, ["第二章内容。"])
 
+    def test_split_chapters_detects_compact_chinese_numeral_chapter_titles(self):
+        source_text = """前言
+这是介绍。
+第十章第一章标题
+第一章内容。
+第十一章第二章标题
+第二章内容。
+"""
+
+        chapters = split_chapters(source_text)
+
+        self.assertEqual(len(chapters), 3)
+        self.assertEqual(chapters[0].title, "Giới thiệu & Tóm tắt")
+        self.assertEqual(chapters[1].title, "第十章第一章标题")
+        self.assertEqual(chapters[1].lines, ["第一章内容。"])
+        self.assertEqual(chapters[2].title, "第十一章第二章标题")
+        self.assertEqual(chapters[2].lines, ["第二章内容。"])
+
     def test_extract_chapter_writes_selected_book_only(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
