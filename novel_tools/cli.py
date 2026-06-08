@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 from typing import TextIO
 
+from novel_tools.chapters import extract_chapter
 from novel_tools.config import ConfigError, load_book_config
 from novel_tools.paths import BookPaths, book_dir_for_id, find_repo_root, list_book_ids
 
@@ -26,6 +27,8 @@ def main(argv: list[str] | None = None, stdout: TextIO | None = None) -> int:
             return _list_books(root, output)
         if args.command == "inspect":
             return _inspect_book(root, args.book, output)
+        if args.command == "extract":
+            return _extract(root, args.book, args.chapter, output)
     except ConfigError as exc:
         parser.exit(1, f"error: {exc}\n")
 
@@ -41,6 +44,10 @@ def _build_parser() -> argparse.ArgumentParser:
 
     inspect_parser = subparsers.add_parser("inspect", help="Inspect a configured book")
     inspect_parser.add_argument("--book", required=True, help="Book id to inspect")
+
+    extract_parser = subparsers.add_parser("extract", help="Extract a source chapter")
+    extract_parser.add_argument("--book", required=True, help="Book id to extract from")
+    extract_parser.add_argument("--chapter", required=True, type=int, help="Chapter index to extract")
 
     return parser
 
@@ -66,6 +73,13 @@ def _inspect_book(root: Path, book_id: str, stdout: TextIO) -> int:
     print(f"Progress entries: {_count_files(paths.progress_dir, PROGRESS_ENTRY_PATTERN)}", file=stdout)
     print(f"Output txt: {_display_path(paths.output_txt, root)}", file=stdout)
     print(f"Output epub: {_display_path(paths.output_epub, root)}", file=stdout)
+    return 0
+
+
+def _extract(root: Path, book_id: str, chapter_index: int, stdout: TextIO) -> int:
+    book_dir = book_dir_for_id(book_id, root)
+    output_path = extract_chapter(book_dir, chapter_index)
+    print(f"Wrote {_display_path(output_path, root)}", file=stdout)
     return 0
 
 
