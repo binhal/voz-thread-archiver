@@ -9,6 +9,7 @@ from typing import TextIO
 from novel_tools.chapters import extract_chapter
 from novel_tools.config import ConfigError, load_book_config
 from novel_tools.paths import BookPaths, book_dir_for_id, find_repo_root, list_book_ids
+from novel_tools.progress import find_indices, latest_index, missing_indices, register_chapter
 
 
 CN_CHAPTER_PATTERN = re.compile(r"^chapter_\d{4,}_cn\.txt$")
@@ -29,6 +30,8 @@ def main(argv: list[str] | None = None, stdout: TextIO | None = None) -> int:
             return _inspect_book(root, args.book, output)
         if args.command == "extract":
             return _extract(root, args.book, args.chapter, output)
+        if args.command == "register":
+            return _register(root, args.book, args.chapter, output)
     except ConfigError as exc:
         parser.exit(1, f"error: {exc}\n")
 
@@ -48,6 +51,10 @@ def _build_parser() -> argparse.ArgumentParser:
     extract_parser = subparsers.add_parser("extract", help="Extract a source chapter")
     extract_parser.add_argument("--book", required=True, help="Book id to extract from")
     extract_parser.add_argument("--chapter", required=True, type=int, help="Chapter index to extract")
+
+    register_parser = subparsers.add_parser("register", help="Register progress for a translated chapter")
+    register_parser.add_argument("--book", required=True, help="Book id to register chapter for")
+    register_parser.add_argument("--chapter", required=True, type=int, help="Chapter index to register")
 
     return parser
 
@@ -71,6 +78,17 @@ def _inspect_book(root: Path, book_id: str, stdout: TextIO) -> int:
     print(f"Chinese chapters: {_count_files(paths.cn_chapters_dir, CN_CHAPTER_PATTERN)}", file=stdout)
     print(f"Vietnamese chapters: {_count_files(paths.vi_chapters_dir, VI_CHAPTER_PATTERN)}", file=stdout)
     print(f"Progress entries: {_count_files(paths.progress_dir, PROGRESS_ENTRY_PATTERN)}", file=stdout)
+
+    vi_indices = find_indices(paths.vi_chapters_dir, ".txt")
+    progress_indices = find_indices(paths.progress_dir, ".json")
+    latest_vi = vi_indices[-1] if vi_indices else None
+    latest_progress = progress_indices[-1] if progress_indices else None
+    gap_end = latest_vi if latest_vi is not None else config.chapter_start_index - 1
+    gaps = missing_indices(progress_indices, config.chapter_start_index, gap_end) if gap_end >= config.chapter_start_index else []
+
+    print(f"Latest Vietnamese chapter: {latest_vi if latest_vi is not None else 'none'}", file=stdout)
+    print(f"Latest progress chapter: {latest_progress if latest_progress is not None else 'none'}", file=stdout)
+    print(f"Progress gaps: {', '.join(str(gap) for gap in gaps[:20]) if gaps else 'none'}", file=stdout)
     print(f"Output txt: {_display_path(paths.output_txt, root)}", file=stdout)
     print(f"Output epub: {_display_path(paths.output_epub, root)}", file=stdout)
     return 0
@@ -79,6 +97,13 @@ def _inspect_book(root: Path, book_id: str, stdout: TextIO) -> int:
 def _extract(root: Path, book_id: str, chapter_index: int, stdout: TextIO) -> int:
     book_dir = book_dir_for_id(book_id, root)
     output_path = extract_chapter(book_dir, chapter_index)
+    print(f"Wrote {_display_path(output_path, root)}", file=stdout)
+    return 0
+
+
+def _register(root: Path, book_id: str, chapter_index: int, stdout: TextIO) -> int:
+    book_dir = book_dir_for_id(book_id, root)
+    output_path = register_chapter(book_dir, chapter_index)
     print(f"Wrote {_display_path(output_path, root)}", file=stdout)
     return 0
 
