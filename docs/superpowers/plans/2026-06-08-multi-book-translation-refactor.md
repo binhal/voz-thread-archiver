@@ -41,7 +41,7 @@ Move during migration:
 - `books/太平令.epub` -> `library/thai-binh-lenh/source/太平令.epub`
 - `books/太平令_Vietnamese_gemini.txt` -> `library/thai-binh-lenh/output/thai-binh-lenh.vi.txt`
 - `books/太平令_Vietnamese_gemini.epub` -> `library/thai-binh-lenh/output/thai-binh-lenh.vi.epub`
-- `books/轮回乐园.txt` -> `library/luan-hoi-lac-vien/source/轮回乐园.txt`
+- `books/轮回乐园.txt` -> `library/luan-hoi-nhac-vien/source/轮回乐园.txt`
 - `chapters/cn/*` -> `library/thai-binh-lenh/chapters/cn/`
 - `chapters/vi/*` -> `library/thai-binh-lenh/chapters/vi/`
 - `progress/gemini/*` -> `library/thai-binh-lenh/progress/gemini/`
@@ -1586,11 +1586,11 @@ git commit -m "feat: add book-scoped title unification"
 - Create: `library/thai-binh-lenh/glossary.tsv`
 - Create: `library/thai-binh-lenh/characters.md`
 - Create: `library/thai-binh-lenh/continuity.md`
-- Create: `library/luan-hoi-lac-vien/book.yaml`
-- Create: `library/luan-hoi-lac-vien/harness.md`
-- Create: `library/luan-hoi-lac-vien/glossary.tsv`
-- Create: `library/luan-hoi-lac-vien/characters.md`
-- Create: `library/luan-hoi-lac-vien/continuity.md`
+- Create: `library/luan-hoi-nhac-vien/book.yaml`
+- Create: `library/luan-hoi-nhac-vien/harness.md`
+- Create: `library/luan-hoi-nhac-vien/glossary.tsv`
+- Create: `library/luan-hoi-nhac-vien/characters.md`
+- Create: `library/luan-hoi-nhac-vien/continuity.md`
 - Move: current book/chapter/progress artifacts into `library/`
 
 - [ ] **Step 1: Capture pre-migration counts**
@@ -1621,7 +1621,7 @@ Run:
 
 ```powershell
 New-Item -ItemType Directory -Force library/thai-binh-lenh/source,library/thai-binh-lenh/chapters/cn,library/thai-binh-lenh/chapters/vi,library/thai-binh-lenh/progress/gemini,library/thai-binh-lenh/progress/minimax,library/thai-binh-lenh/output
-New-Item -ItemType Directory -Force library/luan-hoi-lac-vien/source,library/luan-hoi-lac-vien/chapters/cn,library/luan-hoi-lac-vien/chapters/vi,library/luan-hoi-lac-vien/progress/gemini,library/luan-hoi-lac-vien/output
+New-Item -ItemType Directory -Force library/luan-hoi-nhac-vien/source,library/luan-hoi-nhac-vien/chapters/cn,library/luan-hoi-nhac-vien/chapters/vi,library/luan-hoi-nhac-vien/progress/gemini,library/luan-hoi-nhac-vien/output
 ```
 
 Expected: directories exist.
@@ -1635,7 +1635,7 @@ Move-Item -LiteralPath 'books/太平令.txt' -Destination 'library/thai-binh-len
 Move-Item -LiteralPath 'books/太平令.epub' -Destination 'library/thai-binh-lenh/source/太平令.epub'
 Move-Item -LiteralPath 'books/太平令_Vietnamese_gemini.txt' -Destination 'library/thai-binh-lenh/output/thai-binh-lenh.vi.txt'
 Move-Item -LiteralPath 'books/太平令_Vietnamese_gemini.epub' -Destination 'library/thai-binh-lenh/output/thai-binh-lenh.vi.epub'
-Move-Item -LiteralPath 'books/轮回乐园.txt' -Destination 'library/luan-hoi-lac-vien/source/轮回乐园.txt'
+Move-Item -LiteralPath 'books/轮回乐园.txt' -Destination 'library/luan-hoi-nhac-vien/source/轮回乐园.txt'
 Move-Item -LiteralPath 'chapters/cn/'* -Destination 'library/thai-binh-lenh/chapters/cn/'
 Move-Item -LiteralPath 'chapters/vi/'* -Destination 'library/thai-binh-lenh/chapters/vi/'
 Move-Item -LiteralPath 'progress/gemini/'* -Destination 'library/thai-binh-lenh/progress/gemini/'
@@ -1712,13 +1712,13 @@ Set-Content -LiteralPath 'library/thai-binh-lenh/characters.md' -Value '# Charac
 Set-Content -LiteralPath 'library/thai-binh-lenh/continuity.md' -Value '# Continuity' -Encoding utf8
 ```
 
-- [ ] **Step 5: Add `luan-hoi-lac-vien` starter config**
+- [ ] **Step 5: Add `luan-hoi-nhac-vien` starter config**
 
-Create `library/luan-hoi-lac-vien/book.yaml`:
+Create `library/luan-hoi-nhac-vien/book.yaml`:
 
 ```yaml
-id: luan-hoi-lac-vien
-title: "Luân Hồi Lạc Viên"
+id: luan-hoi-nhac-vien
+title: "Luân Hồi Nhạc Viên"
 source_title: "轮回乐园"
 author: "Unknown"
 language:
@@ -1730,20 +1730,20 @@ chapter:
 source:
   file: "source/轮回乐园.txt"
 outputs:
-  txt: "output/luan-hoi-lac-vien.vi.txt"
-  epub: "output/luan-hoi-lac-vien.vi.epub"
+  txt: "output/luan-hoi-nhac-vien.vi.txt"
+  epub: "output/luan-hoi-nhac-vien.vi.epub"
 providers:
   default: gemini
   progress_dir: "progress/gemini"
 epub:
-  title: "Luân Hồi Lạc Viên (Bản dịch Việt)"
+  title: "Luân Hồi Nhạc Viên (Bản dịch Việt)"
   author: "Unknown"
 ```
 
-Create `library/luan-hoi-lac-vien/harness.md`:
+Create `library/luan-hoi-nhac-vien/harness.md`:
 
 ```markdown
-# Luân Hồi Lạc Viên Translation Harness
+# Luân Hồi Nhạc Viên Translation Harness
 
 Translate Chinese action, survival, game-system, and dark-fantasy prose into sharp, readable Vietnamese.
 
@@ -1765,9 +1765,9 @@ Translate Chinese action, survival, game-system, and dark-fantasy prose into sha
 Create empty optional files:
 
 ```powershell
-Set-Content -LiteralPath 'library/luan-hoi-lac-vien/glossary.tsv' -Value '' -Encoding utf8
-Set-Content -LiteralPath 'library/luan-hoi-lac-vien/characters.md' -Value '# Characters' -Encoding utf8
-Set-Content -LiteralPath 'library/luan-hoi-lac-vien/continuity.md' -Value '# Continuity' -Encoding utf8
+Set-Content -LiteralPath 'library/luan-hoi-nhac-vien/glossary.tsv' -Value '' -Encoding utf8
+Set-Content -LiteralPath 'library/luan-hoi-nhac-vien/characters.md' -Value '# Characters' -Encoding utf8
+Set-Content -LiteralPath 'library/luan-hoi-nhac-vien/continuity.md' -Value '# Continuity' -Encoding utf8
 ```
 
 - [ ] **Step 6: Verify migrated counts and commands**
@@ -1781,7 +1781,7 @@ Get-ChildItem library/thai-binh-lenh/progress/gemini -Filter 'chapter_*.json' | 
 Get-ChildItem library/thai-binh-lenh/progress/minimax -Filter 'chapter_*.json' | Measure-Object
 python -m novel_tools list-books
 python -m novel_tools inspect --book thai-binh-lenh
-python -m novel_tools inspect --book luan-hoi-lac-vien
+python -m novel_tools inspect --book luan-hoi-nhac-vien
 python -m novel_tools context --book thai-binh-lenh --chapter 562
 ```
 
@@ -1790,7 +1790,7 @@ Expected:
 - Counts match pre-migration counts.
 - `list-books` shows both book ids.
 - `inspect --book thai-binh-lenh` shows existing chapter/progress counts.
-- `inspect --book luan-hoi-lac-vien` shows source configured and zero chapter/progress counts.
+- `inspect --book luan-hoi-nhac-vien` shows source configured and zero chapter/progress counts.
 - `context` includes the Thái Bình Lệnh harness.
 
 - [ ] **Step 7: Commit migration**
@@ -1987,7 +1987,7 @@ python -m unittest
 python -m novel_tools list-books
 python -m novel_tools inspect --book thai-binh-lenh
 python -m novel_tools compile --book thai-binh-lenh
-python -m novel_tools inspect --book luan-hoi-lac-vien
+python -m novel_tools inspect --book luan-hoi-nhac-vien
 python -m novel_tools context --book thai-binh-lenh --chapter 562
 ```
 
@@ -1995,7 +1995,7 @@ Expected:
 
 - All tests pass, including `test_voz_thread_backup.py`.
 - `thai-binh-lenh` compiles to `library/thai-binh-lenh/output/thai-binh-lenh.vi.txt` and `.epub`.
-- `luan-hoi-lac-vien` inspect succeeds without translated chapters.
+- `luan-hoi-nhac-vien` inspect succeeds without translated chapters.
 - Context command prints the selected book harness.
 
 - [ ] **Step 5: Commit cleanup**
@@ -2016,7 +2016,7 @@ python -m unittest
 python -m novel_tools list-books
 python -m novel_tools inspect --book thai-binh-lenh
 python -m novel_tools compile --book thai-binh-lenh
-python -m novel_tools inspect --book luan-hoi-lac-vien
+python -m novel_tools inspect --book luan-hoi-nhac-vien
 python -m novel_tools context --book thai-binh-lenh --chapter 562
 git status --short --branch
 ```
@@ -2027,7 +2027,7 @@ Expected:
 - Both book ids are listed.
 - `thai-binh-lenh` has the migrated chapter/progress counts.
 - `thai-binh-lenh` output TXT and EPUB are regenerated in `library/thai-binh-lenh/output/`.
-- `luan-hoi-lac-vien` is configured and inspectable.
+- `luan-hoi-nhac-vien` is configured and inspectable.
 - Working tree is clean after final commit.
 
 ## Self-Review Notes
