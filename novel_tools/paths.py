@@ -33,7 +33,12 @@ def list_book_ids(start: Path | None = None) -> list[str]:
 
 
 def book_dir_for_id(book_id: str, start: Path | None = None) -> Path:
-    book_dir = find_library_dir(start) / book_id
+    library = find_library_dir(start).resolve()
+    book_dir = (library / book_id).resolve()
+    try:
+        book_dir.relative_to(library)
+    except ValueError as exc:
+        raise ConfigError(f"Book id escapes library directory: {book_id}") from exc
     if not (book_dir / "book.yaml").is_file():
         raise ConfigError(f"Unknown book id: {book_id}")
     return book_dir

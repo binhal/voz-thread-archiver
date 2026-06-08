@@ -2,8 +2,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from novel_tools.config import BookConfig, ConfigError, load_book_config
-from novel_tools.paths import BookPaths, find_library_dir, list_book_ids
+from novel_tools.config import BookConfig, ConfigError, load_book_config, parse_limited_yaml
+from novel_tools.paths import BookPaths, book_dir_for_id, find_library_dir, list_book_ids
 
 
 BOOK_YAML = '''\
@@ -81,6 +81,26 @@ class ConfigTests(unittest.TestCase):
 
             self.assertEqual(find_library_dir(root), library)
             self.assertEqual(list_book_ids(root), ["a", "b"])
+
+    def test_book_dir_for_id_rejects_path_traversal(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            library = root / "library"
+            outside = root / "outside"
+            outside.mkdir(parents=True)
+            (outside / "book.yaml").write_text(BOOK_YAML.replace("sample-book", "outside"), encoding="utf-8")
+            library.mkdir()
+
+            with self.assertRaises(ConfigError):
+                book_dir_for_id("../outside", root)
+
+    def test_parse_limited_yaml_rejects_indentation_after_scalar(self):
+        with self.assertRaises(ConfigError):
+            parse_limited_yaml("id: bad\n  title: Bad\n")
+
+    def test_parse_limited_yaml_rejects_skipped_indentation_levels(self):
+        with self.assertRaises(ConfigError):
+            parse_limited_yaml("book:\n    id: bad\n")
 
 
 if __name__ == "__main__":

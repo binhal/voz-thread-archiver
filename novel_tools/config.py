@@ -62,6 +62,8 @@ def parse_limited_yaml(text: str) -> dict[str, Any]:
             stack.pop()
         if not stack:
             raise ConfigError(f"Invalid indentation on line {line_number}")
+        if level != stack[-1][0] + 1:
+            raise ConfigError(f"Invalid indentation on line {line_number}")
 
         parent = stack[-1][1]
         if key in parent:
