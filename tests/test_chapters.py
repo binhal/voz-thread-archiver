@@ -11,10 +11,10 @@ from tests.test_config import BOOK_YAML
 SOURCE_TEXT = """前言
 这是介绍。
 第1章 第一章标题
-第一章内容一。
-第一章内容二。
+本章内容一。
+本章内容二。
 第2章 第二章标题
-第二章内容。
+本章后续内容。
 """
 
 
@@ -26,15 +26,15 @@ class ChapterTests(unittest.TestCase):
         self.assertEqual(chapters[0].title, "Giới thiệu & Tóm tắt")
         self.assertEqual(chapters[1].index, 1)
         self.assertEqual(chapters[1].title, "第1章 第一章标题")
-        self.assertEqual(chapters[1].lines, ["第一章内容一。", "第一章内容二。"])
+        self.assertEqual(chapters[1].lines, ["本章内容一。", "本章内容二。"])
 
     def test_split_chapters_detects_compact_chinese_chapter_titles(self):
         source_text = """前言
 这是介绍。
 第1章第一章标题
-第一章内容。
+本章内容。
 第2章第二章标题
-第二章内容。
+本章后续内容。
 """
 
         chapters = split_chapters(source_text)
@@ -42,17 +42,17 @@ class ChapterTests(unittest.TestCase):
         self.assertEqual(len(chapters), 3)
         self.assertEqual(chapters[0].title, "Giới thiệu & Tóm tắt")
         self.assertEqual(chapters[1].title, "第1章第一章标题")
-        self.assertEqual(chapters[1].lines, ["第一章内容。"])
+        self.assertEqual(chapters[1].lines, ["本章内容。"])
         self.assertEqual(chapters[2].title, "第2章第二章标题")
-        self.assertEqual(chapters[2].lines, ["第二章内容。"])
+        self.assertEqual(chapters[2].lines, ["本章后续内容。"])
 
     def test_split_chapters_detects_compact_chinese_numeral_chapter_titles(self):
         source_text = """前言
 这是介绍。
 第十章第一章标题
-第一章内容。
+本章内容。
 第十一章第二章标题
-第二章内容。
+本章后续内容。
 """
 
         chapters = split_chapters(source_text)
@@ -60,9 +60,32 @@ class ChapterTests(unittest.TestCase):
         self.assertEqual(len(chapters), 3)
         self.assertEqual(chapters[0].title, "Giới thiệu & Tóm tắt")
         self.assertEqual(chapters[1].title, "第十章第一章标题")
-        self.assertEqual(chapters[1].lines, ["第一章内容。"])
+        self.assertEqual(chapters[1].lines, ["本章内容。"])
         self.assertEqual(chapters[2].title, "第十一章第二章标题")
-        self.assertEqual(chapters[2].lines, ["第二章内容。"])
+        self.assertEqual(chapters[2].lines, ["本章后续内容。"])
+
+    def test_split_chapters_detects_compact_heading_suffixes(self):
+        source_text = """前言
+这是介绍。
+第1章标题
+本章内容。
+第2节标题
+本节内容。
+第三集标题
+本集内容。
+"""
+
+        chapters = split_chapters(source_text)
+
+        self.assertEqual(len(chapters), 4)
+        self.assertEqual(chapters[0].title, "Giới thiệu & Tóm tắt")
+        self.assertEqual(chapters[0].lines, ["前言", "这是介绍。"])
+        self.assertEqual(chapters[1].title, "第1章标题")
+        self.assertEqual(chapters[1].lines, ["本章内容。"])
+        self.assertEqual(chapters[2].title, "第2节标题")
+        self.assertEqual(chapters[2].lines, ["本节内容。"])
+        self.assertEqual(chapters[3].title, "第三集标题")
+        self.assertEqual(chapters[3].lines, ["本集内容。"])
 
     def test_extract_chapter_writes_selected_book_only(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -76,7 +99,7 @@ class ChapterTests(unittest.TestCase):
 
             self.assertEqual(written, book_dir / "chapters" / "cn" / "chapter_0001_cn.txt")
             self.assertIn("第1章 第一章标题", written.read_text(encoding="utf-8"))
-            self.assertIn("第一章内容一。", written.read_text(encoding="utf-8"))
+            self.assertIn("本章内容一。", written.read_text(encoding="utf-8"))
 
     def test_cli_extract_uses_book_argument(self):
         with tempfile.TemporaryDirectory() as tmp:
