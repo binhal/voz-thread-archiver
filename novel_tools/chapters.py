@@ -11,7 +11,7 @@ from novel_tools.paths import BookPaths
 SOURCE_ENCODINGS = ("gb18030", "utf-8-sig", "utf-8", "gbk", "cp936")
 INTRO_TITLE = "Giới thiệu & Tóm tắt"
 CHAPTER_TITLE_PATTERN = re.compile(
-    r"^\s*(第\s*[0-9一二三四五六七八九十百千万\s]+\s*[章节集])(?:\s+|[：:、-]|$).*"
+    r"^\s*第\s*(?:[0-9\s]+\s*[章节集].*|[一二三四五六七八九十百千万\s]+\s*[章节集](?:\s+|[：:、-]|$).*)"
 )
 AD_MARKERS = ("ixdzs", "爱下电子书")
 
