@@ -1,0 +1,21 @@
+id: thai-binh-lenh
+title: "Thái Bình Lệnh"
+source_title: "太平令"
+author: "Diêm ZK"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 240
+  title_format: "Chương {index}: {title}"
+source:
+  file: "source/太平令.txt"
+outputs:
+  txt: "output/thai-binh-lenh.vi.txt"
+  epub: "output/thai-binh-lenh.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Thái Bình Lệnh (Bản dịch Việt)"
+  author: "Diêm ZK"
