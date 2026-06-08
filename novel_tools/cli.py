@@ -9,7 +9,7 @@ from typing import TextIO
 from novel_tools.chapters import extract_chapter
 from novel_tools.config import ConfigError, load_book_config
 from novel_tools.paths import BookPaths, book_dir_for_id, find_repo_root, list_book_ids
-from novel_tools.progress import find_indices, latest_index, missing_indices, register_chapter
+from novel_tools.progress import find_indices, latest_index, missing_indices, register_chapter, unify_titles
 from novel_tools.compiler import compile_book
 from novel_tools.context import build_context
 
@@ -38,6 +38,8 @@ def main(argv: list[str] | None = None, stdout: TextIO | None = None) -> int:
             return _compile(root, args.book, output)
         if args.command == "context":
             return _context(root, args.book, args.chapter, output)
+        if args.command == "unify":
+            return _unify(root, args.book, output)
     except ConfigError as exc:
         parser.exit(1, f"error: {exc}\n")
 
@@ -68,6 +70,9 @@ def _build_parser() -> argparse.ArgumentParser:
     context_parser = subparsers.add_parser("context", help="Get translation context for a chapter")
     context_parser.add_argument("--book", required=True, help="Book id")
     context_parser.add_argument("--chapter", required=True, type=int, help="Chapter index")
+
+    unify_parser = subparsers.add_parser("unify", help="Unify chapter titles across txt and progress JSON")
+    unify_parser.add_argument("--book", required=True, help="Book id")
 
     return parser
 
@@ -133,6 +138,13 @@ def _compile(root: Path, book_id: str, stdout: TextIO) -> int:
 def _context(root: Path, book_id: str, chapter_index: int, stdout: TextIO) -> int:
     book_dir = book_dir_for_id(book_id, root)
     print(build_context(book_dir, chapter_index), end="", file=stdout)
+    return 0
+
+
+def _unify(root: Path, book_id: str, stdout: TextIO) -> int:
+    book_dir = book_dir_for_id(book_id, root)
+    count = unify_titles(book_dir)
+    print(f"Updated {count} chapters", file=stdout)
     return 0
 
 

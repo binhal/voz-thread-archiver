@@ -62,3 +62,33 @@ def latest_index(directory: Path, suffix: str) -> int | None:
 def missing_indices(indices: list[int], start: int, end: int) -> list[int]:
     existing = set(indices)
     return [idx for idx in range(start, end + 1) if idx not in existing]
+
+
+def clean_title_prefix(title: str) -> str:
+    cleaned = re.sub(r"^(?:Chương|第)\s*\d+\s*[章:]?\s*", "", title, flags=re.IGNORECASE).strip()
+    return cleaned.lstrip(":").strip()
+
+
+def unify_titles(book_dir: Path) -> int:
+    config = load_book_config(book_dir)
+    paths = BookPaths(book_dir, config)
+    updated = 0
+    for idx in find_indices(paths.progress_dir, ".json"):
+        if idx < config.chapter_start_index:
+            continue
+        json_path = paths.progress_file(idx)
+        data = json.loads(json_path.read_text(encoding="utf-8"))
+        title_text = clean_title_prefix(str(data.get("translated_title", "")))
+        new_title = config.chapter_title_format.format(index=idx, title=title_text)
+        data["index"] = idx
+        data["translated_title"] = new_title
+        json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        txt_path = paths.vi_chapter_file(idx)
+        if txt_path.exists():
+            lines = txt_path.read_text(encoding="utf-8").splitlines()
+            if lines:
+                lines[0] = new_title
+                txt_path.write_text("\n".join(lines), encoding="utf-8")
+        updated += 1
+    return updated
+
