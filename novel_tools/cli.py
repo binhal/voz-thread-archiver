@@ -10,6 +10,7 @@ from novel_tools.chapters import extract_chapter
 from novel_tools.config import ConfigError, load_book_config
 from novel_tools.paths import BookPaths, book_dir_for_id, find_repo_root, list_book_ids
 from novel_tools.progress import find_indices, latest_index, missing_indices, register_chapter
+from novel_tools.compiler import compile_book
 
 
 CN_CHAPTER_PATTERN = re.compile(r"^chapter_\d{4,}_cn\.txt$")
@@ -32,6 +33,8 @@ def main(argv: list[str] | None = None, stdout: TextIO | None = None) -> int:
             return _extract(root, args.book, args.chapter, output)
         if args.command == "register":
             return _register(root, args.book, args.chapter, output)
+        if args.command == "compile":
+            return _compile(root, args.book, output)
     except ConfigError as exc:
         parser.exit(1, f"error: {exc}\n")
 
@@ -55,6 +58,9 @@ def _build_parser() -> argparse.ArgumentParser:
     register_parser = subparsers.add_parser("register", help="Register progress for a translated chapter")
     register_parser.add_argument("--book", required=True, help="Book id to register chapter for")
     register_parser.add_argument("--chapter", required=True, type=int, help="Chapter index to register")
+
+    compile_parser = subparsers.add_parser("compile", help="Compile translated book to txt and epub")
+    compile_parser.add_argument("--book", required=True, help="Book id to compile")
 
     return parser
 
@@ -105,6 +111,15 @@ def _register(root: Path, book_id: str, chapter_index: int, stdout: TextIO) -> i
     book_dir = book_dir_for_id(book_id, root)
     output_path = register_chapter(book_dir, chapter_index)
     print(f"Wrote {_display_path(output_path, root)}", file=stdout)
+    return 0
+
+
+def _compile(root: Path, book_id: str, stdout: TextIO) -> int:
+    book_dir = book_dir_for_id(book_id, root)
+    result = compile_book(book_dir)
+    print(f"Merged {result.chapters_merged} chapters", file=stdout)
+    print(f"Wrote {_display_path(result.output_txt, root)}", file=stdout)
+    print(f"Wrote {_display_path(result.output_epub, root)}", file=stdout)
     return 0
 
 
