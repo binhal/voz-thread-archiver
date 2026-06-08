@@ -107,10 +107,13 @@ class ConfigTests(unittest.TestCase):
             (book_dir / "progress" / "gemini").mkdir(parents=True)
             (book_dir / "book.yaml").write_text(BOOK_YAML, encoding="utf-8")
             (book_dir / "chapters" / "cn" / "chapter_0010_cn.txt").write_text("第10章 A", encoding="utf-8")
+            (book_dir / "chapters" / "cn" / "chapter_10000_cn.txt").write_text("第10000章 A", encoding="utf-8")
             (book_dir / "chapters" / "cn" / "chapter_abcd_cn.txt").write_text("lookalike", encoding="utf-8")
             (book_dir / "chapters" / "vi" / "chapter_0010.txt").write_text("Chương 10: A\n\nBody", encoding="utf-8")
+            (book_dir / "chapters" / "vi" / "chapter_10000.txt").write_text("Chương 10000: A\n\nBody", encoding="utf-8")
             (book_dir / "chapters" / "vi" / "chapter_abcd.txt").write_text("lookalike", encoding="utf-8")
             (book_dir / "progress" / "gemini" / "chapter_0010.json").write_text("{}", encoding="utf-8")
+            (book_dir / "progress" / "gemini" / "chapter_10000.json").write_text("{}", encoding="utf-8")
             (book_dir / "progress" / "gemini" / "chapter_abcd.json").write_text("{}", encoding="utf-8")
             with patch("novel_tools.cli.find_repo_root", return_value=root):
                 out = StringIO()
@@ -118,9 +121,9 @@ class ConfigTests(unittest.TestCase):
             self.assertEqual(code, 0)
             text = out.getvalue()
             self.assertIn("Book: sample-book", text)
-            self.assertIn("Chinese chapters: 1", text)
-            self.assertIn("Vietnamese chapters: 1", text)
-            self.assertIn("Progress entries: 1", text)
+            self.assertIn("Chinese chapters: 2", text)
+            self.assertIn("Vietnamese chapters: 2", text)
+            self.assertIn("Progress entries: 2", text)
             self.assertIn("output/sample.vi.txt", text)
 
     def test_book_dir_for_id_rejects_path_traversal(self):

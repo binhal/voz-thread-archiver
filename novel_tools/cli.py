@@ -10,9 +10,9 @@ from novel_tools.config import ConfigError, load_book_config
 from novel_tools.paths import BookPaths, book_dir_for_id, find_repo_root, list_book_ids
 
 
-CN_CHAPTER_PATTERN = re.compile(r"^chapter_\d{4}_cn\.txt$")
-VI_CHAPTER_PATTERN = re.compile(r"^chapter_\d{4}\.txt$")
-PROGRESS_ENTRY_PATTERN = re.compile(r"^chapter_\d{4}\.json$")
+CN_CHAPTER_PATTERN = re.compile(r"^chapter_\d{4,}_cn\.txt$")
+VI_CHAPTER_PATTERN = re.compile(r"^chapter_\d{4,}\.txt$")
+PROGRESS_ENTRY_PATTERN = re.compile(r"^chapter_\d{4,}\.json$")
 
 
 def main(argv: list[str] | None = None, stdout: TextIO | None = None) -> int:
