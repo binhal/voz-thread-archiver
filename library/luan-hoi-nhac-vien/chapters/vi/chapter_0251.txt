@@ -1,0 +1,155 @@
+Chương 251: Bom Tinh Thần
+
+Mở ra danh sách kỹ năng, lúc này bên cạnh danh sách kỹ năng Diệt Pháp Chi Ảnh xuất hiện một danh sách khác.
+
+Tô Hiểu mở ra danh sách kỹ năng phụ, xoạt một tiếng hiện ra một cây kỹ năng từ trên xuống dưới.
+
+Ngoại trừ hạng mục đầu tiên, những phần khác trên cây kỹ năng đều là một màu xám xịt.
+
+Cây kỹ năng như sau:
+
+【Luyện Kim Học (Hoàn chỉnh)】
+
+Tầng thứ nhất, Chế Tạo Bom Luyện Kim: Lv.1
+
+1: Bom Tinh Thần Sơ Cấp (Mỗi lần chế tạo cần tiêu hao 20 điểm pháp lực, thuốc súng đen, mạch năng lượng thứ cấp, kim loại thông thường, bột axit nóng chảy.)
+
+Tầng thứ hai, Chế Tạo Dược Tề Luyện Kim (Chưa mở khóa, mở khóa yêu cầu tầng thứ nhất đạt tới Lv.10.)
+
+Tầng thứ ba, Chế Tạo Sinh Vật Luyện Kim (Chưa mở khóa, mở khóa yêu cầu tầng thứ hai đạt tới Lv.10.)
+
+Nội dung bên dưới sẽ hiển thị sau khi mở khóa tầng thứ ba.
+
+...
+
+Hiện tại Luyện Kim Học chia làm ba tầng, mỗi tầng đều cần nâng cấp độc lập mới có thể mở khóa tầng tiếp theo.
+
+Trong ba loại năng lực này, Tô Hiểu kỳ vọng nhất vào 'Chế Tạo Bom Luyện Kim' và 'Chế Tạo Dược Tề Luyện Kim'.
+
+Hiện tại hắn chỉ mới nắm giữ Chế Tạo Bom Luyện Kim, đây là một năng lực không tệ, ít nhất sau này sử dụng bom không cần phải mua nữa, nếu chế tạo có dư, hắn còn có thể đem bán trong Luân Hồi Nhạc Viên.
+
+Tô Hiểu bắt đầu nghiên cứu môn Chế Tạo Bom Luyện Kim, muốn nâng cấp năng lực này không chỉ cần 500 xu Nhạc Viên mà còn cần độ thuần thục.
+
+【Tầng thứ nhất, Chế Tạo Bom Luyện Kim: Lv.1 (Độ thuần thục 0/10)】
+
+【1: Bom Tinh Thần Sơ Cấp (Mỗi lần chế tạo cần tiêu hao 20 điểm pháp lực, thuốc súng đen, mạch năng lượng thứ cấp, kim loại thông thường, bột axit nóng chảy.)】
+
+10 điểm độ thuần thục cần phải chế tạo mười lần 'Bom Tinh Thần Sơ Cấp', pháp lực của Tô Hiểu rất dồiào, nhưng những nguyên liệu kia ngoại trừ thuốc súng đen và kim loại thông thường ra, hai loại còn lại hắn chưa từng nghe qua.
+
+Lòng Tô Hiểu chùng xuống, không lẽ lại học phải một kỹ năng phế vật sao.
+
+Thử chế tạo 'Bom Tinh Thần Sơ Cấp', gợi ý của Luân Hồi Nhạc Viên xuất hiện.
+
+【Nguyên liệu không đủ, Có/Không trả 50 xu Nhạc Viên để thay thế nguyên liệu cần thiết.】
+
+Tô Hiểu đại hỷ trong lòng, hắn cảm giác Luân Hồi Nhạc Viên sẽ không định nghĩa một cuộn giấy da phế vật là Ngũ giai, trong tổng số chín giai, Ngũ giai đã được coi là tầm trung.
+
+Chi trả 50 xu Nhạc Viên, ánh sáng trắng lóe lên trong tay Tô Hiểu, xu Nhạc Viên hoàn mỹ thay thế nguyên liệu.
+
+Mười mấy giây sau, một vật thể có hình dáng như kẹo cao su xuất hiện trong tay hắn, dài bằng ngón tay cái, thể tích rất nhỏ.
+
+【Bom Tinh Thần Sơ Cấp】
+
+Phẩm chất: Màu trắng
+
+Hiệu quả: Có thể tiêu hao 1 điểm pháp lực để kích hoạt bất cứ lúc nào (trong phạm vi 500 mét, phạm vi của người chế tạo tăng lên nửa cây số), sau khi nổ gây ra 40 điểm sát thương trong vòng ba mét, dễ dàng mang theo, có thể dán lên hầu hết các vật thể.
+
+Đánh giá: 3 (Lưu ý: Vật phẩm màu trắng có điểm đánh giá từ 1 đến 10.)
+
+Giá bán: 40 xu Nhạc Viên.
+
+...
+
+Tô Hiểu tràn đầy hứng thú mân mê quả bom tinh thần trong tay, thứ này toàn thân màu trắng, dài bằng ngón tay cái, tổng thể rất mềm mại.
+
+Trong lòng hắn bỗng nhiên nảy ra một ý tưởng xấu xa, trộn lẫn một ít siro hương trái cây vào thứ này, tặng cho nhân vật kịch bản rồi bảo đó là kẹo cao su thổi bong bóng.
+
+Khẽ cười một tiếng, Tô Hiểu đưa 【Bom Tinh Thần Sơ Cấp】 tới trước mặt Bubuteni, tên ngốc này lập tức phấn chấn hẳn lên, há miệng định táp một cái.
+
+Sắc mặt Tô Hiểu đen lại, động tác của Bubuteni liền dừng lại.
+
+"Thứ này rất nguy hiểm, sau này nhìn thấy phải tránh xa ra."
+
+Bubuteni rụt cổ lại, xem bộ dạng là đã hiểu.
+
+Tô Hiểu đây là phòng bệnh hơn chữa bệnh, nếu sau khi hắn bố trí bom tinh thần mà Bubuteni lại chạy tới nuốt chửng một ngụm thì hỏng bét.
+
+Thử bày 【Bom Tinh Thần Sơ Cấp】 lên quầy hàng, định giá 100 xu Nhạc Viên, không tính 20 điểm pháp lực tiêu hao, giá vốn của thứ này chỉ có 50 xu Nhạc Viên.
+
+Chuyện ngoài ý muốn xảy ra, chưa đầy năm phút đã có một Khế ước giả dừng chân trước quầy hàng của hắn, trực tiếp mua đứt 【Bom Tinh Thần Sơ Cấp】， hoàn toàn không thèm mặc cả với hắn.
+
+Điều này khiến Tô Hiểu rất ngạc nhiên và vui mừng, hắn cắm cúi ngồi phía sau quầy bắt đầu chế tạo 【Bom Tinh Thần Sơ Cấp】.
+
+Hắn có tổng cộng 573 điểm pháp lực, có thể chế tạo ra 28 quả 【Bom Tinh Thần Sơ Cấp】.
+
+Ánh sáng nhấp nháy, rất nhanh chín quả 【Bom Tinh Thần Sơ Cấp】 đã xuất hiện trên quầy hàng.
+
+Tô Hiểu mở danh sách kỹ năng, quả nhiên, độ thuần thục của tầng thứ nhất Chế Tạo Bom Luyện Kim đã đầy.
+
+Thử nâng cấp 'Chế Tạo Bom Luyện Kim', hắn không rõ loại năng lực này có cần phải đến Đại Sảnh Cường Hóa Kỹ Năng để nâng cấp hay không, đây là kỹ năng thuộc dạng tri thức.
+
+Một lượng lớn tri thức tràn vào não bộ, Tô Hiểu cảm thấy đầu óc choáng váng một trận, vài giây sau liền khôi phục lại bình thường, hắn dần dần chắt lọc kiến thức trong đầu, đây đều là kiến thức về 'Chế Tạo Bom Luyện Kim'.
+
+'Chế Tạo Bom Luyện Kim' đã tăng lên tới Lv.2, một năng lực mới xuất hiện.
+
+Tầng thứ nhất, Chế Tạo Bom Luyện Kim: Lv.2 (Độ thuần thục 0/20)
+
+1: Bom Tinh Thần Sơ Cấp (Mỗi lần chế tạo cần tiêu hao 20 điểm pháp lực, thuốc súng đen, mạch năng lượng thứ cấp, kim loại thông thường, bột axit nóng chảy.)
+
+2: Bom Tinh Thần Trung Cấp (Mỗi lần chế tạo cần tiêu hao 30 điểm pháp lực, thuốc súng đen, mạch năng lượng hạ đẳng, kim loại Matri, nước cường toan, da ếch nổ.)
+
+...
+
+Tô Hiểu thử chế tạo 'Bom Tinh Thần Trung Cấp' mới xuất hiện, nguyên liệu cần thiết cũng có thể được thay thế bằng xu Nhạc Viên, mỗi lần chế tạo cần chi trả 100 xu Nhạc Viên.
+
+Trị số pháp lực cao ngất ngưởng của hắn cuối cùng cũng có tác dụng trong thời gian nghỉ ngơi ở Luân Hồi Nhạc Viên, hơn nữa mỗi lần 100 xu Nhạc Viên cũng không tính là nhiều, Tô Hiểu bắt đầu liên tục chế tạo 'Bom Tinh Thần Trung Cấp'.
+
+Khi pháp lực còn lại 15 điểm, Tô Hiểu dừng chế tạo, hắn tổng cộng làm ra 12 quả bom tinh thần trung cấp.
+
+Cúi đầu nhìn lại, 9 quả 【Bom Tinh Thần Sơ Cấp】 trên quầy hàng đều đã bán sạch, thứ này rất được hoan nghênh.
+
+Tô Hiểu trầm ngâm một lát, giữ lại 5 quả 【Bom Tinh Thần Trung Cấp】, 7 quả còn lại định giá 400 xu Nhạc Viên một quả.
+
+Giá vốn của 12 quả 【Bom Tinh Thần Trung Cấp】 là 1200 xu Nhạc Viên, pháp lực hắn không tính vào, pháp lực có thể chậm rãi khôi phục, thuộc về tài nguyên tái sinh.
+
+12 quả vốn 1200 xu Nhạc Viên, bán 400 xu một quả, chỉ cần bán được ba quả là thu hồi vốn, vụ buôn bán này rất lời, không phải rất lời, mà là bạo lợi.
+
+Mức giá cao 400 xu Nhạc Viên khiến những Khế ước giả đi ngang qua bắt đầu đắn đo, do dự nửa ngày vẫn chưa lựa chọn mua.
+
+Phạm vi nổ của 【Bom Tinh Thần Trung Cấp】 là 5 mét, có thể gây ra 90 điểm sát thương, đánh giá 7 điểm, nếu không Tô Hiểu sẽ không bán đắt như vậy.
+
+"Quả bom tinh thần này rẻ hơn chút đi."
+
+Một nam tử vạm vỡ mặc toàn thân giáp đứng trước quầy hàng.
+
+"350 là thấp nhất."
+
+Thực ra bán 200 xu Nhạc Viên cũng được, Tô Hiểu chỉ đang thử dò xét khả năng chịu đựng của Khế ước giả mà thôi.
+
+"350 sao, chuyện này..."
+
+Gã giáp sắt vạm vỡ lộ vẻ khó xử, Tô Hiểu nhướng mày.
+
+"Ngươi định mua hết?"
+
+"Đúng vậy, loại bom tinh thần này rất dễ mang theo, vả lại uy lực không tồi, mang theo một ít bên người khá tốt."
+
+Tâm trạng Tô Hiểu rất tốt, có vẻ như bom đạn trong Luân Hồi Nhạc Viên đắt hàng hơn hắn tưởng tượng nhiều.
+
+"Bảy quả này lấy 2200 xu Nhạc Viên, đây là giá thấp nhất rồi."
+
+Gã giáp sắt cười khờ hai tiếng, đồng ý mức giá này. Ngay khi gã chuẩn bị rời đi, gã chợt nhìn thấy chiếc nhẫn phẩm chất màu xanh lá cây trên quầy hàng.
+
+"Chiếc nhẫn này cũng rẻ hơn đi, 7000 xu Nhạc Viên thế nào."
+
+"10000 xu Nhạc Viên, thứ này miễn mặc cả."
+
+Gã giáp sắt lắc đầu, bắt đầu trả giá với Tô Hiểu. Sau khi tranh chấp vài phút, gã giáp sắt thở dài một hơi, bỏ ra 10000 xu Nhạc Viên mua chiếc nhẫn Ác Linh Gầm Thét.
+
+Bây giờ chỉ còn lại 【Lệnh Bài Vương Tử Băng Vực (Màu xanh lam)】, thứ này không dễ bán cho lắm.
+
+Tô Hiểu ngáp một cái, lấy ra máy tính bảng, tựa vào bên hông Bubuteni, ở tư thế nửa nằm nửa ngồi, vắt chân chữ ngũ bắt đầu chơi trò chơi giải đố.
+
+Bubuteni đang ngủ trên tấm thảm ngẩng đầu nhìn thoáng qua, thấy là Tô Hiểu thì nó lại tiếp tục ngủ.
+
+Sự trung thành của Bubuteni khiến Tô Hiểu rất hài lòng, kẻ cô độc lăn lộn trong Luân Hồi Nhạc Viên rất cô đơn, có thêm tên ngốc này bên cạnh cũng không tệ.
