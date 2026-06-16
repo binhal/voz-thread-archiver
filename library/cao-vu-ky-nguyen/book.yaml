@@ -1,0 +1,21 @@
+id: cao-vu-ky-nguyen
+title: "Cao Vũ Kỷ Nguyên"
+source_title: "高武纪元"
+author: "烽仙"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "source/高武纪元.txt"
+outputs:
+  txt: "output/cao-vu-ky-nguyen.vi.txt"
+  epub: "output/cao-vu-ky-nguyen.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Cao Vũ Kỷ Nguyên (Bản dịch Việt)"
+  author: "烽仙"
