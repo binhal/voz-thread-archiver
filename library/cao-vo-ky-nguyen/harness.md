@@ -1,4 +1,4 @@
-# Cao Vũ Kỷ Nguyên Translation Harness
+# Cao Võ Kỷ Nguyên Translation Harness
 
 Translate Chinese futuristic sci-fi high-martial arts and evolution prose into sharp, readable Vietnamese.
 
