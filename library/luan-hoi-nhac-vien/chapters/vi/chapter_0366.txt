@@ -1,0 +1,181 @@
+Chương 366: Con cừu kỳ lạ
+
+Tô Hiểu thu dọn các vật phẩm trong không gian lưu trữ.
+
+Thẻ Tinh Hồng và rương báu đã mở xong, hiện tại vật phẩm còn lại trong không gian lưu trữ không nhiều, lần lượt là:
+
+Tinh thể linh hồn (nhỏ) ×1.
+
+Huy chương Danh dự Bạc ×1.
+
+Trái Ác Quỷ (Tím sẫm)
+
+Quyền trượng Vương quyền (Xanh lục)
+
+Dây thừng đặc chế (Xanh lục)
+
+Xu Nhạc Viên: 29900
+
+Tô Hiểu đã nâng cao thực lực xong, những việc còn lại nhẹ nhàng hơn rất nhiều, đó là bán vật phẩm và mở khóa Luyện kim Dược tề học.
+
+Tuy nhiên, trước khi xử lý những thứ này, Tô Hiểu chuẩn bị dùng [Huy chương Danh dự Bạc] trước.
+
+Cửa hàng Danh dự là đãi ngộ của Luân Hồi Nhạc Viên dành cho Liệp Sát Giả. Theo Tô Hiểu thấy, đây có lẽ là lợi ích duy nhất khi trở thành Liệp Sát Giả.
+
+Cửa hàng Danh dự nằm ở góc phòng chuyên dụng, hình dáng trông giống như một chiếc máy bán hàng tự động cỡ lớn, nhưng thứ này lại tràn ngập cảm giác công nghệ.
+
+Trong phòng chuyên dụng, có hai thứ mà Bubuteni không dám cắn gặm, một là Tô Hiểu, thứ kia chính là Cửa hàng Danh dự.
+
+Bubuteni cũng từng nảy sinh ý đồ với thứ này, hậu quả có thể tưởng tượng được, Bubuteni đã khóc lóc đi tìm Tô Hiểu, bộ dạng lúc đó đừng nhắc tới có bao nhiêu ủy khuất.
+
+Từ đó về sau, Bubuteni đều đi đường vòng tránh xa Cửa hàng Danh dự.
+
+【Chào mừng Liệp Sát Giả sử dụng Cửa hàng Danh dự, vui lòng đọc các điều khoản dưới đây.】
+
+1, Vật phẩm trong Cửa hàng Danh dự chỉ có thể đổi bằng Huy chương Danh dự.
+
+2, Vật phẩm đổi từ Cửa hàng Danh dự là vật phẩm bị khóa, không thể giao dịch với các khế ước giả khác.
+
+3, Nghiêm cấm Liệp Sát Giả nhắc đến sự tồn tại of Cửa hàng Danh dự với bất kỳ ai, nếu không sẽ bị cưỡng chế xử tử.
+
+4, Hàng hóa trong Cửa hàng Danh dự khá ít, cung cấp số lượng có hạn.
+
+5, Vật phẩm đã đổi sẽ không được trả lại dưới mọi hình thức.
+
+……
+
+Các điều khoản có đến vài chục dòng, Tô Hiểu trước đó đã đọc qua những điều khoản này. Cửa hàng Danh dự thực chất là một nền tảng giao dịch, nhưng đối tượng giao dịch lại là Luân Hồi Nhạc Viên.
+
+Dùng ý niệm thao tác Cửa hàng Danh dự, Cửa hàng Danh dự lập tức xuất hiện thay đổi.
+
+【Liệp Sát Giả sở hữu Huy chương Danh dự Bạc, có thể tiến hành đổi các vật phẩm sau:】
+
+Tinh thể linh hồn (trung) ×1.
+
+Giá bán: Một Huy chương Danh dự Bạc.
+
+……
+
+Dược tề Phục hồi Danh dự Loại II.
+
+Hiệu quả: Sau khi sử dụng, khôi phục 100% sinh mệnh và 100% pháp lực trong vòng hai giây.
+
+Giá bán: Một Huy chương Danh dự Bạc.
+
+……
+
+Quyền miễn trừ thất bại nhiệm vụ chính tuyến.
+
+Hiệu quả: Có thể miễn trừ một lần hình phạt khấu trừ thuộc tính hoặc khấu trừ xu Nhạc Viên, không thể miễn trừ cưỡng chế xử tử.
+
+Giá bán: Một Huy chương Danh dự Bạc.
+
+……
+
+Kiểm tra và phục hồi dấu hiệu sinh tồn (một lần)
+
+Hiệu quả: Có thể tiến hành khôi phục toàn diện cho Liệp Sát Giả, sửa chữa các vết thương ngầm và mầm bệnh tiềm ẩn trong cơ thể do chiến đấu lâu dài gây ra, đưa cơ thể của Liệp Sát Giả về trạng thái tốt nhất.
+
+Gợi ý: Hiệu quả khôi phục này sẽ không thể đổi sau khi các thuộc tính sức mạnh, nhanh nhẹn, thể lực vượt quá 50 điểm.
+
+Giá bán: Một Huy chương Danh dự Bạc.
+
+……
+
+Bốn sự lựa chọn, Tô Hiểu trước tiên loại trừ Tinh thể linh hồn (trung). Hắn có những thủ đoạn khác để kiếm được Tinh thể linh hồn (trung), không cần phải lãng phí Huy chương Danh dự Bạc quý giá.
+
+Ba loại còn lại thì rất khó lựa chọn, [Dược tề Phục hồi Danh dự Loại II] có thể đưa trạng thái về mức tốt nhất trong vòng hai giây, có thể nói là 'hồi sinh tại chỗ'.
+
+[Quyền miễn trừ thất bại nhiệm vụ chính tuyến] có thể miễn trừ một lần hình phạt. Nếu nhiệm vụ chính tuyến thất bại, hắn không cần lo lắng bị khấu trừ thuộc tính.
+
+[Kiểm tra và phục hồi dấu hiệu sinh tồn] lại càng trân quý vô cùng, có thể sửa chữa cơ thể của hắn. Trong chiến đấu không tránh khỏi việc bị thương, để lại mầm bệnh tiềm ẩn lại càng là chuyện thường gặp.
+
+Lần đổi tương tự như vậy Tô Hiểu đã làm một lần, lần trước là thanh tẩy cơ thể, còn lần này Cửa hàng Danh dự cung cấp là sửa chữa phục hồi.
+
+Chọn một trong ba, vô cùng khó khăn.
+
+Tô Hiểu đặt một bàn tay lên ngực, nhắm mắt cảm nhận, sau khi cảm nhận kỹ lưỡng thì lồng ngực mơ hồ truyền đến từng trận nhói đau.
+
+Chiêu Chỉ Thương - Loạn Lam trước đó của Kaku đã phá hủy nội tạng của Tô Hiểu một cách hỗn loạn. Nếu không phải cơ thể đủ mạnh mẽ, hắn e rằng đã không cầm cự nổi.
+
+Mặc dù sau khi trở lại Luân Hồi Nhạc Viên, Luân Hồi Nhạc Viên đã cung cấp chức năng phục hồi thương thế, nhưng hắn vẫn mơ hồ cảm thấy ngực mình nặng trĩu.
+
+Không chỉ có vết thương này, những vết thương do Akame gây ra trong thế giới Akame ga Kill!, hay việc bị Dika bắn thủng ngực và bụng dưới trong thế giới chiến tranh, v.v., đều để lại một số mầm bệnh tiềm ẩn.
+
+Những vết thương này vào những ngày mưa gió sẽ lại ẩn hiện đau nhức. Luân Hồi Nhạc Viên chỉ cung cấp phục hồi vết thương cơ bản, chứ không khôi phục những vết thương ngầm do chiến đấu để lại.
+
+Tô Hiểu tuy thực lực tăng lên rất nhanh, nhưng hắn đã đi qua và chiến đấu với quá nhiều cường địch, sẹo trên ngực chằngчит ngang dọc.
+
+"Lựa chọn... Kiểm tra và phục hồi dấu hiệu sinh tồn."
+
+Tô Hiểu đột nhiên nghĩ thông suốt, nếu không có một cơ thể khỏe mạnh, con đường sau này của hắn sẽ không đi được xa. Cho dù là về phương diện đao thuật hay Diệt Pháp Chi Ảnh, đều cần có một cơ thể mạnh mẽ làm bệ đỡ.
+
+【Đang kiểm tra trạng thái Liệp Sát Giả... Kiểm tra hoàn tất.】
+
+【Các bộ phận trọng điểm cần khôi phục: Phổi, gan, động mạch chủ tim, thận trái, đốt sống, xương cổ tay...】
+
+Tô Hiểu ngẩn ra, hắn không ngờ cơ thể của mình lại xuất hiện nhiều mầm bệnh tiềm ẩn đến như vậy.
+
+【Phát hiện xương sườn bị lệch vị trí nghiêm trọng, đang dò tìm vị trí ban đầu...】
+
+【Phát hiện xương chân có ba điểm nứt gãy chưa lành hẳn...】
+
+Hàng loạt vấn đề xuất hiện, trong lúc chiến đấu, cơ thể của Tô Hiểu đã phải chịu đựng một gánh nặng khổng lồ.
+
+【Bắt đầu phục hồi, xin Liệp Sát Giả hãy nghỉ ngơi chốc lát.】
+
+Sau thông báo của Luân Hồi Nhạc Viên, Tô Hiểu bắt đầu cảm thấy buồn ngủ, toàn thân thả lỏng.
+
+【Xác minh hoàn tất, khởi động chức năng phục hồi, đã thu thập 100L Nguồn Nước Sinh Mệnh.】
+
+Tô Hiểu đã không còn nghe thấy thông báo của Luân Hồi Nhạc Viên nữa, hắn đã chìm vào giấc ngủ sâu.
+
+Một lượng lớn những giọt nước màu xanh lục bảo hiện ra trong không khí, những giọt nước này dần dần tụ lại một chỗ, bao bọc Tô Hiểu vào bên trong.
+
+Trong lúc ngủ say, Tô Hiểu đã mơ một giấc mơ, hắn đang nằm trên một thảo nguyên xanh tươi bát ngát, gió nhẹ lướt qua mặt, ánh nắng chan hòa.
+
+Trong phòng chuyên dụng, Nguồn nước Sinh Mệnh bao bọc lấy Tô Hiểu, dòng suối sinh mệnh màu xanh lục bảo nhạt dần đi, những vết thương ngầm và mầm bệnh tiềm ẩn trong cơ thể Tô Hiểu nhanh chóng được chữa lành, các cơ quan nội tạng trở nên tràn đầy sức sống một cách bất thường, một số khớp xương bị lệch cũng được nắn chỉnh về vị trí tối ưu nhất.
+
+Tô Hiểu vẫn đang chìm đắm trong giấc mơ. Trong làn sương mờ ảo, một con cừu từ phía xa chạy lại.
+
+Con cừu này không hiểu vì sao, thò lưỡi ra bắt đầu liếm mặt Tô Hiểu.
+
+Tô Hiểu rất muốn xua đuổi con cừu này đi, nhưng không hiểu sao hắn lại không thể động đậy được, hơn nữa hắn cũng không cảm thấy có chút nguy hiểm nào.
+
+Bị 'cừu' liếm mặt, cơn giận của Tô Hiểu bắt đầu tích tụ.
+
+Một lúc sau, con cừu kia không liếm mặt hắn nữa, mà trực tiếp ngồi lên ngực hắn.
+
+Thể hình của con cừu này tuy không lớn, nhưng lại rất nặng, đè ép khiến Tô Hiểu hít thở không thông.
+
+Ngồi trên ngực Tô Hiểu, con cừu kia tiếp tục liếm mặt hắn...
+
+Tô Hiểu đột ngột mở mắt ra, một khuôn mặt chó phóng đại ngay trước mắt. Lúc này, Bubuteni đang ngồi trên ngực hắn và liếm mặt hắn.
+
+“Ta biết ngay là ngươi mà!”
+
+Gân xanh trên trán Tô Hiểu giật giật, Bubuteni phát hiện tình hình không ổn, vội vèo một cái chui tọt xuống gầm giường.
+
+Tô Hiểu vừa đứng dậy liền lập tức phát hiện sự thay đổi của cơ thể.
+
+Cơ thể giống như được gột rửa bằng nước sạch từ trong ra ngoài, cảm giác đau nhói mơ hồ trong cơ thể trước đó đã biến mất, cơ thể trở nên vô cùng nhẹ nhàng. Cảm giác này giống như trước đây hắn luôn khoác trên người một lớp giáp sắt nặng nề, mà hôm nay, lớp giáp sắt này đã được cởi bỏ.
+
+Rút Trảm Long Thiểm ra, Tô Hiểu thực hiện một vài bài tập cơ bản.
+
+Một tiếng sau, Tô Hiểu mồ hôi đầm đìa thở phào nhẹ nhõm, thầm nghĩ, hóa ra việc sở hữu một cơ thể khỏe mạnh lại tuyệt vời đến vậy.
+
+Bất ngờ chưa dừng lại ở đó, khi Tô Hiểu vô tình nhìn vào thông tin cá nhân, hắn phát hiện các thuộc tính của mình đã tăng lên. Hắn lập tức kiểm tra thuộc tính không mặc trang bị, như vậy sự gia tăng thuộc tính sẽ rõ ràng hơn.
+
+Sức mạnh: 38 (Tăng 2 điểm)
+
+Nhanh nhẹn: 37 (Tăng 1 điểm)
+
+Thể lực: 33 (Tăng 2 điểm)
+
+Trí lực: 36
+
+Mê lực: 3
+
+……
+
+Đưa cơ thể về trạng thái tốt nhất giúp thuộc tính của Tô Hiểu tăng nhẹ, giá trị của Huy chương Danh dự Bạc đã được thể hiện rõ ràng.
