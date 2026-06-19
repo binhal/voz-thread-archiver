@@ -1,0 +1,21 @@
+id: nhat-the-chi-ton
+title: "Nhất Thế Chi Tôn"
+source_title: "一世之尊"
+author: "Ái Tiềm Thủy Đích Ô Tặc"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "source/一世之尊.txt"
+outputs:
+  txt: "output/nhat-the-chi-ton.vi.txt"
+  epub: "output/nhat-the-chi-ton.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Nhất Thế Chi Tôn (Bản dịch Việt)"
+  author: "Ái Tiềm Thủy Đích Ô Tặc"
