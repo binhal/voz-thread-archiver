@@ -11,7 +11,7 @@ def clean_xml_string(value: str) -> str:
 
 
 def split_translated_txt(content: str) -> list[tuple[str, list[str]]]:
-    chapter_pattern = re.compile(r"^\s*(?:第\s*[0-9一二三四五六七八九十百千万\s]+\s*[章节集]|Chương\s*[0-9\s]+).*", re.IGNORECASE)
+    chapter_pattern = re.compile(r"^\s*(?:(?:Quyển\s*\d+\s*-?\s*)?Chương\s*\d+|第\s*[0-9一二三四五六七八九十百千万\s]+\s*[章节集]).*", re.IGNORECASE)
     chapters: list[tuple[str, list[str]]] = []
     current_title = "Giới thiệu & Tóm tắt"
     current_lines: list[str] = []

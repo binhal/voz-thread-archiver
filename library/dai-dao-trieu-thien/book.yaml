@@ -1,0 +1,21 @@
+id: dai-dao-trieu-thien
+title: "Đại Đạo Triều Thiên"
+source_title: "大道朝天"
+author: "Miêu Nị"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "source/大道朝天.txt"
+outputs:
+  txt: "output/dai-dao-trieu-thien.vi.txt"
+  epub: "output/dai-dao-trieu-thien.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Đại Đạo Triều Thiên (Bản dịch Việt)"
+  author: "Miêu Nị"
