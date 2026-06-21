@@ -1,0 +1,21 @@
+id: cau-tai-vo-dao-the-gioi-thanh-thanh
+title: "Cẩu Tại Võ Đạo Thế Giới Thành Thánh"
+source_title: "苟在武道世界成圣"
+author: "Tại Thủy Trung Đích Chỉ Lão Hổ"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "source/cau-tai-vo-dao-the-gioi-thanh-thanh.txt"
+outputs:
+  txt: "output/cau-tai-vo-dao-the-gioi-thanh-thanh.vi.txt"
+  epub: "output/cau-tai-vo-dao-the-gioi-thanh-thanh.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Cẩu Tại Võ Đạo Thế Giới Thành Thánh (Bản dịch Việt)"
+  author: "Tại Thủy Trung Đích Chỉ Lão Hổ"

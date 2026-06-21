@@ -1,0 +1,21 @@
+id: kiem-lai
+title: "Kiếm Lai"
+source_title: "剑来"
+author: "Phong Hỏa Hí Chư Hầu"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "source/kiem-lai.txt"
+outputs:
+  txt: "output/kiem-lai.vi.txt"
+  epub: "output/kiem-lai.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Kiếm Lai (Bản dịch Việt)"
+  author: "Phong Hỏa Hí Chư Hầu"

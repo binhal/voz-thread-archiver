@@ -1,0 +1,21 @@
+id: dao-quy-di-tien
+title: "Đạo Quỷ Dị Tiên"
+source_title: "道诡异仙"
+author: "Hồ Vĩ Đích Bút"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "source/dao-quy-di-tien.txt"
+outputs:
+  txt: "output/dao-quy-di-tien.vi.txt"
+  epub: "output/dao-quy-di-tien.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Đạo Quỷ Dị Tiên (Bản dịch Việt)"
+  author: "Hồ Vĩ Đích Bút"
