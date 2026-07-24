@@ -1,0 +1,21 @@
+id: dai-quan-gia-la-ma-hoang
+title: "Đại Quản Gia Là Ma Hoàng"
+source_title: "魔皇大管家"
+author: "Dạ Kiêu"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "output/dai-quan-gia-la-ma-hoang.vi.txt"
+outputs:
+  txt: "output/dai-quan-gia-la-ma-hoang.vi.txt"
+  epub: "output/dai-quan-gia-la-ma-hoang.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Đại Quản Gia Là Ma Hoàng"
+  author: "Dạ Kiêu"
