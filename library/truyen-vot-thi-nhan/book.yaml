@@ -1,0 +1,21 @@
+id: truyen-vot-thi-nhan
+title: "Tuyết Vọt Thị Nhân"
+source_title: "雪中悍刀行"
+author: "Phong Hỏa Hí Chư Hầu"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "output/truyen-vot-thi-nhan.vi.txt"
+outputs:
+  txt: "output/truyen-vot-thi-nhan.vi.txt"
+  epub: "output/truyen-vot-thi-nhan.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Tuyết Vọt Thị Nhân"
+  author: "Phong Hỏa Hí Chư Hầu"

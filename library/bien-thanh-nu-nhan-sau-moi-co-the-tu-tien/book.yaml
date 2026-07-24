@@ -1,0 +1,20 @@
+id: bien-thanh-nu-nhan-sau-moi-co-the-tu-tien
+title: "Biến Thành Nữ Nhân Sau Mới Có Thể Tu Tiên"
+author: "Metruyenchuvn"
+language:
+  source: zh-CN
+  target: vi
+chapter:
+  start_index: 1
+  title_format: "Chương {index}: {title}"
+source:
+  file: "output/bien-thanh-nu-nhan-sau-moi-co-the-tu-tien.vi.txt"
+outputs:
+  txt: "output/bien-thanh-nu-nhan-sau-moi-co-the-tu-tien.vi.txt"
+  epub: "output/bien-thanh-nu-nhan-sau-moi-co-the-tu-tien.vi.epub"
+providers:
+  default: gemini
+  progress_dir: "progress/gemini"
+epub:
+  title: "Biến Thành Nữ Nhân Sau Mới Có Thể Tu Tiên"
+  author: "Metruyenchuvn"
